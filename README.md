@@ -62,11 +62,38 @@ _TOK Connection: To what extent does ```the use of data science``` in climate re
 
 ## Test Plan
 
-# Criteria C: Development
+# Criteria C: Development (around 1000 word max)
 
 ## List of techniques used
 
-## Development
+1. API communication with remote server
+2. Filtering using moving average
+3. 
+
+### 1. Filtering using moving average
+
+Things to explain: a) what problem are you trying to solve (what success criteria), b) demonstrate your technical
+understanding, c) algorithmic thinking.
+
+Ex: To solve SC#1 I encounter the problem that the values from teh sensors are noisy due to the changes in the
+temperature and other variables. I thougt about using an algorithm to filter the data and smooth it. After some reseach
+I decided to use the moving average. To make things more sustainable and organized I decided to use a function to
+implemented the moving average and placed it in a library.
+```.py
+def moving_average(windowSize:int, x:list)->list:
+    # this function  has a purpose XXXX
+    #The inputs are XXXXX
+    # the output is xxxx
+    x_smoothed = []
+    for i in range(0, len(x)-windowSize):
+        x_section = x[i:i+windowSize]
+        x_average = sum(x_section)/windowSize
+        x_smoothed += [x_average]
+
+    return x_smoothed
+```
+In the code above, we can see that the function signature includes two inputs, ```windowSize:int ``` is the size used for filtering which is of
+data type integer.....
 
 
 # Criteria D: Functionality
